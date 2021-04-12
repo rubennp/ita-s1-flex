@@ -10,6 +10,7 @@
  /*
   * GENERAL:
   */
+
 body > * { 
     background-color: black;
     margin: 20px;
@@ -63,6 +64,14 @@ nav li { flex: 100; }
 
 main > section { flex: 70; }
 
+aside { flex: 30; }
+
 article p { flex: 50; }
 
-aside { flex: 30; }
+/* Exercici 2: */
+
+/* MEDIA QUERIES TAULETA */
+@media (min-width: 768px) and (max-width: 1024px) {
+    main { background-color: #FEFE04; }
+    main > section, aside { flex: 100%; }
+}
