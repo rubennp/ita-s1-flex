@@ -1,0 +1,68 @@
+/*
+ * IT Academy - Pràctica 1
+ * Main estils: estils generals de la pràctica
+ * 
+ * Rubèn Nieto Perarnau
+ */
+
+/* Exercici 1 */
+
+ /*
+  * GENERAL:
+  */
+body > * { 
+    background-color: black;
+    margin: 20px;
+    padding: 10px;
+}
+
+header > *, main > * {
+    margin: 10px;
+    padding: 10px;
+}
+
+ul li { list-style-type: none; }
+
+p {
+    height: 20px;
+    margin: 10px;
+}
+
+/* 
+ * COLORS: 
+ */ 
+#top-header { background-color: #2C4059; }
+#top-header p { background-color: #EA5456; }
+
+nav { background-color: #F07A3F; }
+nav p { background-color: #FED460; }
+
+main > section { background-color: #4E4E6A; }
+
+article p { background-color: #1E6CB0; }
+article + footer p { background-color: #71A3C4; }
+
+aside { background-color: #F83F51; }
+aside p { background-color: #FEEA84; }
+
+body > footer p { background-color: #E6AF2E; }
+
+/*
+ * FLEX
+ */
+main, ul, article { 
+    display: flex; 
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+#top-header ul li { flex: 15; }
+#top-header ul li:nth-child(2) { flex: 70; }
+
+nav li { flex: 100; }
+
+main > section { flex: 70; }
+
+article p { flex: 50; }
+
+aside { flex: 30; }

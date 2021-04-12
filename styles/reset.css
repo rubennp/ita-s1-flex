@@ -1,0 +1,15 @@
+/*
+ * IT Academy - Pràctica 1
+ * Reset estils: elimina qualsevol estil aplicat per navegador
+ * 
+ * Rubèn Nieto Perarnau
+ */
+
+body, body * {
+    margin: unset;
+    box-sizing: unset;
+    padding: unset;
+    font-size: unset;
+    color: unset;
+    text-decoration: unset;
+}
