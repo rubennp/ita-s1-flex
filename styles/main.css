@@ -52,14 +52,17 @@ header {
     color: #808080;
 }
 
+/* logo */
 header img { width: 4rem; }
 
+/* menú navegació */
 nav li:first-of-type { margin-right: 20px; }
 
 nav li:not(:first-of-type) { margin: 0 10px; }
 
 nav i { margin-right: 10px; }
 
+/* "Disfruta ..." */
 #top-header + section {
     background-color: rgba( 150, 150, 150, 0.1);
     font-family: Times, serif;
@@ -97,6 +100,21 @@ aside { background-color: #F83F51; }
 aside p { background-color: #FEEA84; }
 
 body > footer p { background-color: #E6AF2E; }
+
+nav li a { padding: 5px; }
+
+/* 
+ * Exercici 4: efecte rollover clicables 
+ */
+nav li a, i, div.social a {
+    transition: all linear 0.2s;
+}
+
+nav li a:hover, div.social a:hover { color: black; }
+
+nav li a:hover { border-bottom: black solid 3px; }
+
+a:hover i { transform: rotate(-15deg); }
 
 /* Exercici 2: */
 
