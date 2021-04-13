@@ -1,0 +1,47 @@
+/*
+ * Estils per organització pàgina amb flex
+ * IT Academy - Pràctica1: Flex
+ *
+ * Rubèn Nieto Perarnau
+ */
+
+main, #top-header, article, div { 
+    display: flex; 
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+#top-header div { flex: 70; }
+#top-header .logo, #top-header .social { flex: 15; }
+
+nav { align-content: center; }
+
+.social {
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+}
+
+#top-header + section { flex: 100; }
+
+main > section { flex: 70; }
+
+aside { flex: 30; }
+
+article p { flex: 50; }
+
+/* Exercici 2: */
+
+/* MEDIA QUERIES TAULETA */
+@media (min-width: 768px) and (max-width: 1024px) {
+    main > section, aside { flex: 100%; }
+}
+
+/* Exercici 3: */
+
+/* MEDIA QUERIES MÒVIL */
+@media (min-width: 320px) and (max-width: 768px) {
+    #top-header div,
+    main > section,
+    article p { flex: 100%; }
+}

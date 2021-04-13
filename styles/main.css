@@ -16,10 +16,6 @@ body, body * {
 
 /* Exercici 1 */
 
- /*
-  * GENERAL:
-  */
-
 body > * { 
     background-color: black;
     margin: 20px;
@@ -31,21 +27,66 @@ header > *, main > * {
     padding: 10px;
 }
 
-ul li { list-style-type: none; }
+ul li {
+    display: inline;
+    list-style-type: none;
+}
 
 p {
     height: 20px;
     margin: 10px;
 }
 
+#top-header { 
+    padding: 20px; 
+    margin-bottom: 20px;
+}
+
+/* Exercici 4: */ 
+header {
+    background: url("../images/header-background.jpg") no-repeat center center;
+    background-size: cover;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    font-size: 0.8em;
+    color: #808080;
+}
+
+header img { width: 4rem; }
+
+nav li:first-of-type { margin-right: 20px; }
+
+nav li:not(:first-of-type) { margin: 0 10px; }
+
+nav i { margin-right: 10px; }
+
+#top-header + section {
+    background-color: rgba( 150, 150, 150, 0.1);
+    font-family: Times, serif;
+    font-size: 2.5em;
+    color: rgba(249, 64, 81, 0.4); 
+    text-align: center;
+    padding: 1em;
+}
+
+.quote {
+    font-size: 1.75em;
+    vertical-align: middle;
+    padding: 5px;
+}
+
 /* 
  * COLORS: 
- */ 
+ */
+/* Ve d'exercicis 1, 2 i 3:
+
 #top-header { background-color: #2C4059; }
 #top-header p { background-color: #EA5456; }
 
 #top-header + section { background-color: #F07A3F; }
 #top-header + section p { background-color: #FED460; }
+
+*/
 
 main > section { background-color: #4E4E6A; }
 
@@ -57,32 +98,12 @@ aside p { background-color: #FEEA84; }
 
 body > footer p { background-color: #E6AF2E; }
 
-/*
- * FLEX
- */
-main, #top-header, article { 
-    display: flex; 
-    flex-wrap: wrap;
-    align-content: space-around;
-}
-
-#top-header div { flex: 70; }
-#top-header .logo, #top-header .social { flex: 15; }
-
-#top-header + section { flex: 100; }
-
-main > section { flex: 70; }
-
-aside { flex: 30; }
-
-article p { flex: 50; }
-
 /* Exercici 2: */
 
+/* MEDIA QUERIES TAULETA */
 @media (min-width: 768px) and (max-width: 1024px) {
     /* COLORS: */
     main { background-color: #FEFE04; }
-    main > section, aside { flex: 100%; }
 }
 
 /* Exercici 3: */
@@ -102,9 +123,4 @@ article p { flex: 50; }
     body > footer p { background-color: #FEC864; }
 
     #top-header { margin-bottom: 20px !important; }
-
-    /* FLEX: */
-    #top-header div,
-    main > section,
-    article p { flex: 100%; }
 }
