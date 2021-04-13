@@ -79,8 +79,32 @@ article p { flex: 50; }
 
 /* Exercici 2: */
 
-/* MEDIA QUERIES TAULETA */
 @media (min-width: 768px) and (max-width: 1024px) {
+    /* COLORS: */
     main { background-color: #FEFE04; }
     main > section, aside { flex: 100%; }
+}
+
+/* Exercici 3: */
+
+/* MEDIA QUERIES MÒVIL */
+@media (min-width: 320px) and (max-width: 768px) {
+    /* COLORS: */
+    main { background-color: #FDE229; }
+    main > section { background-color: #095070; }
+
+    article p { background-color: #62959C; }
+    article + footer p { background-color: #A3DDCB; }
+
+    aside { background-color: #FC7A54; }
+    aside p { background-color: #FDB36A; }
+
+    body > footer p { background-color: #FEC864; }
+
+    #top-header { margin-bottom: 20px !important; }
+
+    /* FLEX: */
+    #top-header ul li,
+    main > section,
+    article p { flex: 100%; }
 }
