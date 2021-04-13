@@ -62,7 +62,7 @@ nav li:not(:first-of-type) { margin: 0 10px; }
 
 nav i { margin-right: 10px; }
 
-/* "Disfruta ..." */
+/* text "Disfruta ..." a la capçalera */
 #top-header + section {
     background-color: rgba( 150, 150, 150, 0.1);
     font-family: Times, serif;
@@ -72,6 +72,7 @@ nav i { margin-right: 10px; }
     padding: 1em;
 }
 
+/* Dobles comes del text "Disfruta ..." */
 .quote {
     font-size: 1.75em;
     vertical-align: middle;
