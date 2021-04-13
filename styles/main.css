@@ -81,14 +81,14 @@ nav i { margin-right: 10px; }
 /* 
  * COLORS: 
  */
-/* Ve d'exercicis 1, 2 i 3:
+/* (ve d'exercicis 1, 2 i 3 del Nivell 1) : */
 
+/*
 #top-header { background-color: #2C4059; }
 #top-header p { background-color: #EA5456; }
 
 #top-header + section { background-color: #F07A3F; }
 #top-header + section p { background-color: #FED460; }
-
 */
 
 main > section { background-color: #4E4E6A; }
