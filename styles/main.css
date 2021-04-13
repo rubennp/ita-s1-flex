@@ -107,9 +107,7 @@ nav li a { padding: 5px; }
 /* 
  * Exercici 4: efecte rollover clicables 
  */
-nav li a, i, div.social a {
-    transition: all linear 0.2s;
-}
+nav li a, i, div.social a { transition: all linear 0.2s; }
 
 nav li a:hover, div.social a:hover { color: black; }
 
