@@ -24,24 +24,31 @@ nav { align-content: center; }
 
 #top-header + section { flex: 100; }
 
+/* Exercici 5: */
+/*
 main > section { flex: 70; }
 
 aside { flex: 30; }
 
 article p { flex: 50; }
+*/
+article { flex: 50; }
 
 /* Exercici 2: */
 
 /* MEDIA QUERIES TAULETA */
 @media (min-width: 768px) and (max-width: 1024px) {
-    main > section, aside { flex: 100%; }
+    /* (Ex5) */
+    /* main > section, aside { flex: 100%; } */
 }
 
 /* Exercici 3: */
 
 /* MEDIA QUERIES MÒVIL */
 @media (min-width: 320px) and (max-width: 768px) {
-    #top-header div,
-    main > section,
-    article p { flex: 100%; }
+    #top-header div, article
+    /* (Ex5) */
+    /* main > section,
+    article p */ 
+    { flex: 100%; }
 }
