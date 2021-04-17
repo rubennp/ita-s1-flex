@@ -14,8 +14,6 @@ body, body * {
     text-decoration: unset;
 }
 
-/* Exercici 1 */
-
 body > * { 
     background-color: black;
     margin: 20px;
@@ -32,16 +30,17 @@ ul li {
     list-style-type: none;
 }
 
-/* (Ex5) */
-footer p {
+footer p, aside p {
     height: 20px;
 }
+
 p, a {
     font-family: Montserrat, sans-serif;
     margin: 10px;
 }
 
 p { color: #444; }
+
 article a { 
     color: #878787; 
     transition: color linear 0.2s;
@@ -53,7 +52,6 @@ article a:hover { color: #444; }
     margin-bottom: 20px;
 }
 
-/* Exercici 4: */ 
 body > header {
     background: url("../images/header-background.jpg") no-repeat center center;
     background-size: cover;
@@ -93,31 +91,15 @@ nav i { margin-right: 10px; }
 /* 
  * COLORS: 
  */
-/* (ve d'exercicis 1, 2 i 3 del Nivell 1) : */
-
-/*
-#top-header { background-color: #2C4059; }
-#top-header p { background-color: #EA5456; }
-
-#top-header + section { background-color: #F07A3F; }
-#top-header + section p { background-color: #FED460; }
-*/
-
-/* per Ex5
-main > section { background-color: #4E4E6A; }
-
-article p { background-color: #1E6CB0; }
 article + footer p { background-color: #71A3C4; }
 
 aside { background-color: #F83F51; }
 aside p { background-color: #FEEA84; }
-*/
 
 body > footer p { background-color: #E6AF2E; }
 
 nav li a { padding: 5px; }
 
-/* Exercici 5: */
 header { margin: 10px 20px !important; }
 
 main { 
@@ -140,7 +122,8 @@ article header {
     margin: 0 !important;
 }
 
-article header .info {
+/* informació de l'article */
+.info {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -168,6 +151,7 @@ article header .info {
 
 .info time { color: rgba(0,0,0,0.5); }
 
+/* imatges de l'article */
 #article1 header {
     background: url("../images/flor-cerezo.jpg") no-repeat center center;
     background-size: cover;
@@ -178,9 +162,7 @@ article header .info {
     background-size: cover;
 }
 
-/* 
- * Exercici 4: efecte rollover clicables 
- */
+/* efecte rollover clicables */
 nav li a, i, div.social a { transition: all linear 0.2s; }
 
 nav li a:hover, div.social a:hover { color: black; }
@@ -189,7 +171,6 @@ nav li a:hover { border-bottom: black solid 3px; }
 
 a:hover i { transform: rotate(-15deg); }
 
-/* Exercici 2: */
 
 /* MEDIA QUERIES TAULETA */
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -198,13 +179,9 @@ a:hover i { transform: rotate(-15deg); }
     /* main { background-color: #FEFE04; } */
 }
 
-/* Exercici 3: */
-
 /* MEDIA QUERIES MÒVIL */
 @media (min-width: 320px) and (max-width: 768px) {
     /* COLORS: */
-    /* (Ex5) */
-    /*
     main { background-color: #FDE229; }
     main > section { background-color: #095070; }
 
@@ -213,7 +190,7 @@ a:hover i { transform: rotate(-15deg); }
 
     aside { background-color: #FC7A54; }
     aside p { background-color: #FDB36A; }
-    */
+
     body > footer p { background-color: #FEC864; }
 
     #top-header { margin-bottom: 20px !important; }
