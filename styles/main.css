@@ -20,36 +20,16 @@ body > * {
     padding: 10px;
 }
 
-header > *, main > * {
-    margin: 10px;
-    padding: 10px;
-}
-
 ul li {
     display: inline;
     list-style-type: none;
 }
 
-footer p, aside p {
-    height: 20px;
-}
+footer p, aside p { height: 20px; }
 
 p, a {
     font-family: Montserrat, sans-serif;
     margin: 10px;
-}
-
-p { color: #444; }
-
-article a { 
-    color: #878787; 
-    transition: color linear 0.2s;
-}
-article a:hover { color: #444; }
-
-#top-header { 
-    padding: 20px; 
-    margin-bottom: 20px;
 }
 
 body > header {
@@ -61,15 +41,31 @@ body > header {
     color: #808080;
 }
 
+#top-header { 
+    padding: 20px; 
+    margin-bottom: 20px;
+}
+
 /* logo */
-header img { width: 4rem; }
+.logo img { width: 4rem; }
 
 /* menú navegació */
 nav li:first-of-type { margin-right: 20px; }
 
 nav li:not(:first-of-type) { margin: 0 10px; }
 
+nav li a { padding: 5px; }
+
 nav i { margin-right: 10px; }
+
+/* efecte rollover clicables */
+nav li a, i, div.social a { transition: all linear 0.2s; }
+
+nav li a:hover, div.social a:hover { color: black; }
+
+nav li a:hover { border-bottom: black solid 3px; }
+
+a:hover i { transform: rotate(-15deg); }
 
 /* text "Disfruta ..." a la capçalera */
 #top-header + section {
@@ -88,26 +84,15 @@ nav i { margin-right: 10px; }
     padding: 5px;
 }
 
-/* 
- * COLORS: 
- */
-article + footer p { background-color: #71A3C4; }
-
-aside { background-color: #F83F51; }
-aside p { background-color: #FEEA84; }
-
-body > footer p { background-color: #E6AF2E; }
-
-nav li a { padding: 5px; }
-
-header { margin: 10px 20px !important; }
-
 main { 
     background-color: #DCDCDC;
     margin-top: 0 !important;
     padding: 0 !important;
 }
 
+/*
+ * ARTICLES
+ */
 article {
     background-color: #ECECEC; 
     margin: 5px;
@@ -122,35 +107,6 @@ article header {
     margin: 0 !important;
 }
 
-/* informació de l'article */
-.info {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-content: flex-start;
-    width: 100%;
-    padding: 0 5px 0 0;
-    margin: 0;
-}
-
-.info * { width: 100%; }
-
-.info h2, time {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 600;
-    line-height: 12px;
-    padding-left: 5px;
-}
-
-.info h2 {
-    text-transform: uppercase;
-    color: #ECECEC;
-    background-color: #F83F51;
-    padding-top: 20px;
-}
-
-.info time { color: rgba(0,0,0,0.5); }
-
 /* imatges de l'article */
 #article1 header {
     background: url("../images/flor-cerezo.jpg") no-repeat center center;
@@ -162,15 +118,58 @@ article header {
     background-size: cover;
 }
 
-/* efecte rollover clicables */
-nav li a, i, div.social a { transition: all linear 0.2s; }
+/* informació de l'article */
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: flex-start;
+    width: 100%;
+    padding: 0 5px 0 0;
+    margin: 0;
+}
 
-nav li a:hover, div.social a:hover { color: black; }
+.info h2, time {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    line-height: 0.8em;
+    padding-left: 5px;
+}
 
-nav li a:hover { border-bottom: black solid 3px; }
+.info h2 {
+    text-transform: uppercase;
+    color: #ECECEC;
+    background-color: #F83F51;
+    padding-top: 20px;
+    font-size: 1.5em;
+    width: 100%;
+}
 
-a:hover i { transform: rotate(-15deg); }
+.info time { color: rgba(0,0,0,0.5); }
 
+/* TEXT de l'ARTICLE */
+article p { color: #444; }
+
+article a { 
+    color: #878787; 
+    transition: color linear 0.2s;
+}
+
+article a:hover { color: #444; }
+
+/* PEU dels ARTICLES */
+article + footer p { background-color: #71A3C4; }
+
+/* BARRA LATERAL */
+aside { 
+    background-color: #F83F51;
+    margin: 5px;
+}
+
+aside p { background-color: #FEEA84; }
+
+/* PEU DE PÀGINA */
+body > footer p { background-color: #E6AF2E; }
 
 /* MEDIA QUERIES TAULETA */
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -181,17 +180,13 @@ a:hover i { transform: rotate(-15deg); }
 
 /* MEDIA QUERIES MÒVIL */
 @media (min-width: 320px) and (max-width: 768px) {
-    /* COLORS: */
-    main { background-color: #FDE229; }
-    main > section { background-color: #095070; }
+    #top-header { margin-bottom: 20px !important; }
 
-    article p { background-color: #62959C; }
-    article + footer p { background-color: #A3DDCB; }
+    /* COLORS: */
+    body > footer p { background-color: #FEC864; }
 
     aside { background-color: #FC7A54; }
     aside p { background-color: #FDB36A; }
 
-    body > footer p { background-color: #FEC864; }
-
-    #top-header { margin-bottom: 20px !important; }
+    article + footer p { background-color: #A3DDCB; }
 }

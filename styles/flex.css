@@ -5,7 +5,7 @@
  * Rubèn Nieto Perarnau
  */
 
-main, #top-header, article, div { 
+#top-header, main, article, div { 
     display: flex; 
     flex-wrap: wrap;
     align-content: space-around;
@@ -28,7 +28,7 @@ main > section { flex: 70; }
 
 aside { flex: 30; }
 
-article { flex: 40; }
+section > article { flex: 50; }
 
 /* MEDIA QUERIES TAULETA */
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -37,6 +37,6 @@ article { flex: 40; }
 
 /* MEDIA QUERIES MÒVIL */
 @media (min-width: 320px) and (max-width: 768px) {
-    #top-header div, article
+    #top-header div, article, aside
     { flex: 100%; }
 }
