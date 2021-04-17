@@ -3,9 +3,10 @@
 ### Rubèn Nieto Perarnau
 
 **Que hay en cada rama?**
-* main -> n2 -> ex5
-* Rama por ejercicio (ex1...ex6)
-* Rama por nivel
+* He creado una rama por cada ejercicio (ex1...ex6).
+* He creado una rama por cada nivel, con el último ejercicio del nivel:
     * n1 -> ex3
     * n2 -> ex5
     * n3 -> ex6 
+* En main hay el último ejercicio:
+    * main -> n2 -> ex5
