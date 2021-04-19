@@ -5,6 +5,161 @@
  * Rubèn Nieto Perarnau
  */
 
+ /*
+  * Main estils: estils generals de la pràctica
+ */
+
+ /* GENERAL */
+body, body * {
+    margin: unset;
+    box-sizing: unset;
+    padding: unset;
+    font-size: unset;
+    color: unset;
+    text-decoration: unset;
+}
+
+body > * { 
+    background-color: black;
+    margin: 20px;
+    padding: 10px;
+}
+
+ul li { list-style-type: none; }
+
+footer p, aside p { height: 20px; }
+
+p, a {
+    font-family: Montserrat, sans-serif;
+    margin: 10px;
+}
+
+/* HEADER */
+body > header {
+    background: url("../images/header-background.jpg") no-repeat center center;
+    background-size: cover;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: #808080;
+}
+
+/* TOP-HEADER */
+#top-header { 
+    padding: 20px; 
+    margin-bottom: 20px;
+}
+
+/* -> logo */
+.logo img { width: 4rem; }
+
+/* -> menú navegació */
+nav i { margin-right: 5px; }
+
+/* -> efecte rollover clicables */
+nav li a, i, div.social a { transition: all linear 0.2s; }
+
+nav li a:hover, div.social a:hover, div.social-grid a:hover { color: black; }
+
+nav li a:hover span { border-bottom: black solid 3px; }
+
+a:hover i { transform: rotate(-15deg); }
+
+/* text "Disfruta ..." */
+#top-header + section {
+    background-color: rgba( 150, 150, 150, 0.1);
+    font-family: Times, serif;
+    font-size: 2.5em;
+    color: rgba(249, 64, 81, 0.4); 
+    text-align: center;
+    padding: 1em;
+}
+
+quote::before { content: "“"; }
+
+quote::after { content: "”"; }
+
+quote::before, quote::after {
+    font-size: 1.75em;
+    vertical-align: middle;
+    padding: 5px;
+}
+
+/* MAIN */
+main { 
+    background-color: #DCDCDC;
+    margin-top: 0 !important;
+    padding: 0 !important;
+}
+
+/* -> ARTICLES */
+article {
+    background-color: #ECECEC; 
+    margin: 5px;
+    padding: 5px;
+}
+
+/* --> IMATGES (FONS) de l'article*/
+#article1 header {
+    background: url("../images/flor-cerezo.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+#article2 header {
+    background: url("../images/fujiyama.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+/* --> informació de l'article */
+.info h2, time {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    line-height: 0.8em;
+    padding-left: 5px;
+}
+
+.info h2 {
+    text-transform: uppercase;
+    color: #ECECEC;
+    background-color: #F83F51;
+    padding-top: 20px;
+    font-size: 1.5em;
+    width: 100%;
+}
+
+.info time { color: rgba(0,0,0,0.5); }
+
+/* --> TEXT de l'ARTICLE */
+article p { color: #444; }
+
+article a { 
+    color: #878787; 
+    transition: color linear 0.2s;
+}
+
+article a:hover { color: #444; }
+
+/* --> PEU dels ARTICLES */
+article + footer p { 
+    background-color: #71A3C4; 
+    margin: 5px;
+}
+
+/* -> BARRA LATERAL */
+aside { 
+    background-color: #F83F51;
+    margin: 5px;
+}
+
+aside p { background-color: #FEEA84; }
+
+/* PEU DE PÀGINA */
+body > footer p { background-color: #E6AF2E; }
+
+/*
+ * FLEX
+ */
+
 #top-header, #top-header > div, main, main > section, article { 
     display: flex; 
     flex-wrap: wrap;
@@ -33,22 +188,52 @@ aside { flex: 30; }
 
 section > article { flex: 50; }
 
+/* Capçalera de l'ARTICLE */
+article header {
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    height: 20rem;
+    margin: 0 !important;
+}
+
+/* informació de l'ARTICLE */
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: flex-start;
+    width: 100%;
+    padding: 0 5px 0 0;
+    margin: 0;
+}
+
 section footer { flex: 100%; }
 
-/* MEDIA QUERIES TAULETA */
+/* 
+ * MEDIA QUERIES
+ */
+ 
+/* TAULETA */
 @media (min-width: 768px) and (max-width: 1024px) {
     main > section, aside { flex: 100%; }
 }
 
-/* MEDIA QUERIES MÒVIL */
+/* MÒVIL */
 @media (min-width: 320px) and (max-width: 768px) {
-    #top-header { padding: 0; }
+    #top-header { 
+        padding: 0; 
+        margin-bottom: 20px !important; 
+    }
     #top-header div, 
     article, 
     aside
     { flex: 100% !important; }
     
     #top-header > * { justify-content: center; }
+
+    /* tamany text "Disfruta..." */
+    #top-header + section { font-size: 2em; }
     
     nav ul li a { 
         display: flex;
@@ -64,5 +249,13 @@ section footer { flex: 100%; }
     .social { 
         order: -1; 
         flex-direction: row; 
-    } 
+    }
+
+    /* COLORS: */
+    body > footer p { background-color: #FEC864; }
+
+    aside { background-color: #FC7A54; }
+    aside p { background-color: #FDB36A; }
+ 
+    article + footer p { background-color: #A3DDCB; }
 }

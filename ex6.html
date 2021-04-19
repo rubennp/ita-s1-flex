@@ -6,43 +6,41 @@
         <meta name="keywords" content="HTML5, CSS3, Flex, Grid">
         <meta name="author" content="Rubèn Nieto Perarnau">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>IT Academy - Pràctica 1: Flex</title>
+        <title>IT Academy - Pràctica 1: Grid</title>
 
         <!-- CSS -->
-        <link rel="stylesheet" type="text/css" href="styles/flex.css" />
+        <link rel="stylesheet" type="text/css" href="styles/grid.css" />
         
         <!-- Font Awesome Icons -->
         <script src="https://kit.fontawesome.com/a0de11684c.js" crossorigin="anonymous"></script>
     </head>
 
-    <body>
-        <header>
-            <section id="top-header">
+    <body class="grid-container">
+        <header class="header-grid">
+            <section class="nav-header-grid">
                 <div class="logo">
                     <a href="#"><img src="images/logo.png" alt="Logotip de la pàgina"></a>
                 </div>
-                <div>
-                    <nav>
-                        <ul>
-                            <li><a href="#"><i class="fas fa-caravan"></i><span>Inicio</span></a></li>
-                            <li><a href="#"><i class="fas fa-route"></i><span>Rutas</span></a></li>
-                            <li><a href="#"><i class="fas fa-concierge-bell"></i><span>Hoteles</span></a></li>
-                            <li><a href="#"><i class="fas fa-plane"></i><span>Vuelos</span></a></li>
-                            <li><a href="#"><i class="far fa-envelope"></i><span>Contacto</span></a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="social">
+                <nav class="menu-grid">
+                    <ul>
+                        <li><a href="#"><i class="fas fa-caravan"></i><span>Inicio</span></a></li>
+                        <li><a href="#"><i class="fas fa-route"></i><span>Rutas</span></a></li>
+                        <li><a href="#"><i class="fas fa-concierge-bell"></i><span>Hoteles</span></a></li>
+                        <li><a href="#"><i class="fas fa-plane"></i><span>Vuelos</span></a></li>
+                        <li><a href="#"><i class="far fa-envelope"></i><span>Contacto</span></a></li>
+                    </ul>
+                </nav>
+                <div class="social-grid">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
                 </div>
             </section>
-            <section>
+            <section class="sub-header-grid">
                 <quote>Disfruta de la experiencia de otros viajeros</quote>
             </section>
         </header>
-        <main>
-            <section>
+        <main class="main-grid">
+            <section class="articles-grid">
                 <article id="article1">
                     <header>
                         <div class="info">
@@ -71,16 +69,16 @@
                     </p>
                     <a href="#">Leer más...</a>
                 </article>
-                <footer>
+                <footer class="articles-footer-grid">
                     <p></p>
                 </footer>
             </section>
-            <aside>
+            <aside class="sidebar-grid">
                 <p></p>
                 <p></p>
             </aside>
         </main>
-        <footer>
+        <footer class="footer-grid">
             <p></p>
         </footer>
     </body>
