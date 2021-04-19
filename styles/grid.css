@@ -160,7 +160,7 @@ body > footer p { background-color: #E6AF2E; }
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto auto auto;
-    gap: 5px 5px;
+    gap: 20px 5px;
     grid-template-areas:
       "header-grid"
       "main-grid"
