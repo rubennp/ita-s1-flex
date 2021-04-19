@@ -7,6 +7,6 @@
 * He creado una rama por cada nivel, con el último ejercicio del nivel:
     * n1 -> ex3
     * n2 -> ex5
-    * n3 -> ex6 (hasta ejercicio 5 _FLEX_ en index.html, ejercicio 6 _GRID_ en ex6-grid.html)
+    * n3 -> ex6 (hasta ejercicio 5 _FLEX_ en **index.html**, ejercicio 6 _GRID_ en **ex6-grid.html**)
 * En main hay el último ejercicio:
     * main -> n3 -> ex6
