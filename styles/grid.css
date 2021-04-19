@@ -15,9 +15,10 @@
     text-decoration: unset;
 }
 
+body { padding: 20px; }
+
 body > * { 
     background-color: black;
-    margin: 20px;
     padding: 10px;
 }
 
@@ -157,8 +158,8 @@ body > footer p { background-color: #E6AF2E; }
 
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1.25fr 2fr 0.25fr;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
     gap: 5px 5px;
     grid-template-areas:
       "header-grid"
@@ -166,13 +167,11 @@ body > footer p { background-color: #E6AF2E; }
       "footer-grid";
 }
 
-.grid-container > * { margin-bottom: 10px;}
-
 .header-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 10px 0px;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    gap: 20px 0px;
     grid-template-areas:
       "nav-header-grid"
       "sub-header-grid";
@@ -182,16 +181,16 @@ body > footer p { background-color: #E6AF2E; }
 .nav-header-grid {
     display: grid;
     grid-template-columns: 0.5fr 2fr 0.5fr;
-    grid-template-rows: 1fr;
-    gap: 5px 5px;
+    grid-template-rows: 6.5rem;
     grid-template-areas:
       "logo-grid menu-grid social-grid";
     grid-area: nav-header-grid;
+    padding: 0 20px;
 }
 
 .logo { 
     grid-area: logo-grid;
-    justify-self: center;
+    justify-self: start;
     align-self: center;
 }
 
@@ -225,7 +224,7 @@ nav ul {
 .main-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 0.8fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: auto;
     gap: 5px 5px;
     grid-template-areas:
       "articles-grid articles-grid sidebar-grid";
@@ -236,7 +235,7 @@ nav ul {
 .articles-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 90% 10%;
+    grid-template-rows: auto auto;
     gap: 5px 5px;
     grid-template-areas:
       ". ."
@@ -249,6 +248,7 @@ article {
     flex-direction: column;
     align-content: flex-end;
 }
+
 article header { 
     display: flex;
     flex-direction: column;
@@ -262,10 +262,10 @@ article header {
 }
 
 .sidebar-grid { grid-area: sidebar-grid; }
+
 .footer-grid { 
     grid-area: footer-grid; 
     align-self: center;
-    margin-top: 10px;
 }
 
 /*
@@ -274,15 +274,27 @@ article header {
 
  /* TAULETA */
 @media (min-width: 768px) and (max-width: 1024px) {
-    
+    body { padding: 10px; }
+
+    .main-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr auto;
+        gap: 5px 5px;
+        grid-template-areas:
+          "articles-grid articles-grid"
+          "sidebar-grid sidebar-grid";
+        grid-area: main-grid;
+        height: auto;
+    }
 }
 
 /* MÒVIL */
-@media (min-width: 320px) and (max-width: 768px) {
-    #top-header { margin-bottom: 20px !important; }
+@media only screen and (max-width: 768px) {
+    body { padding: 5px; }
 
     /* tamany text "Disfruta..." */
-    #top-header + section { font-size: 2em; }
+    .sub-header-grid { font-size: 2em; }
 
     /* COLORS: */
     body > footer p { background-color: #FEC864; }
@@ -291,4 +303,63 @@ article header {
     aside p { background-color: #FDB36A; }
 
     article + footer p { background-color: #A3DDCB; }
+
+    .main-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+        gap: 5px 5px;
+        grid-template-areas:
+          "articles-grid"
+          "sidebar-grid";
+        grid-area: main-grid;
+        height: auto;
+    }
+
+    .articles-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 5px 5px;
+        grid-template-areas:
+          "."
+          "."
+          "articles-footer-grid";
+        grid-area: articles-grid;
+    }
+
+    .nav-header-grid {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+          "social-grid"
+          "logo-grid"
+          "menu-grid";
+        row-gap: 10px;
+        grid-area: nav-header-grid;
+        justify-content: center !important;
+    }
+
+    .logo { justify-self: center; }
+    
+    .social-grid { 
+        grid-area: social-grid; 
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .social-grid a:first-of-type { margin-right: 10px; }
+
+    nav ul li a { 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 0.875em;
+    }
+    
+    nav ul li a span { border-bottom: rgba(0, 0, 0, 0) solid 5px; }
+    
+    nav ul li a { text-align: center; }
 }
